@@ -38,7 +38,8 @@
 
 - 순수 HTML / CSS / JavaScript 단일 파일 (`index.html`)
 - 외부 빌드 도구·프레임워크 없음, GitHub Pages 바로 배포 가능
-- Google Fonts (Noto Serif KR / Noto Sans KR) 사용, 나머지는 전부 인라인
+- Google Fonts (Jua / Noto Sans KR) 사용, 나머지는 전부 인라인
+- 밝은 파스텔 테마 + 이모지 아이콘, 다크 모드 미지원
 
 ## 계산 근거
 
