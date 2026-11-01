@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>화(火) 한 점을 채우는 법 — 기토(己土) 여성의 직업운과 오행 보완</title>
-<meta name="description" content="음력 1971-06-12 19:30 여성. 기토(己土) 일간의 사주팔자와 오행 분포를 분석하고, 부족한 화(火) 기운과 조율점 목(木)을 생활에서 채우는 구체적인 방법을 정리했습니다." />
+<title>화(火) 한 점을 채우는 법 — 기토(己土) 여성의 직업·금전·연애운과 오행 보완</title>
+<meta name="description" content="음력 1971-06-12 19:30 여성. 기토(己土) 일간의 사주팔자와 오행 분포를 분석하고, 부족한 화(火) 기운을 채우는 방법과 직업운·금전운·연애운·궁합 가이드를 정리했습니다." />
 <meta name="theme-color" content="#0e0b0a" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,7 +126,7 @@
   .chip b{color:var(--text);font-weight:500;}
 
   /* ===== 섹션 ===== */
-  section{padding:64px 0;border-top:1px solid var(--line-soft);}
+  section{padding:64px 0;border-top:1px solid var(--line-soft);scroll-margin-top:78px;}
   .sec-head{margin-bottom:38px;}
   .sec-num{
     font-family:var(--serif);font-size:.78rem;letter-spacing:.3em;
@@ -298,6 +298,35 @@
   footer a{color:var(--gold);text-decoration:none;}
   footer a:hover{text-decoration:underline;}
 
+  /* ===== 궁합 등급 ===== */
+  .grades{display:grid;gap:10px;margin-top:8px;}
+  .grade-row{
+    display:grid;grid-template-columns:132px 1fr 96px;align-items:center;gap:16px;
+    background:var(--surface);border:1px solid var(--line-soft);
+    border-radius:12px;padding:15px 18px;transition:.25s;
+  }
+  .grade-row:hover{border-color:var(--line);background:var(--surface-2);}
+  @media(max-width:640px){.grade-row{grid-template-columns:1fr;gap:8px;}}
+  .grade-who{font-family:var(--serif);font-size:.98rem;line-height:1.4;}
+  .grade-who small{display:block;font-family:var(--sans);font-size:.68rem;color:var(--muted);letter-spacing:.12em;margin-top:3px;}
+  .grade-why{font-size:.86rem;color:var(--muted);}
+  .grade-stars{text-align:right;font-size:.82rem;letter-spacing:.06em;white-space:nowrap;}
+  @media(max-width:640px){.grade-stars{text-align:left;}}
+  .st-on{color:var(--fire);}
+  .st-off{color:rgba(242,236,230,.16);}
+  .grade-best .grade-who{color:var(--fire-2);}
+
+  /* ===== 2열 목록 ===== */
+  .cols2{display:grid;grid-template-columns:1fr 1fr;gap:26px 40px;margin-top:8px;}
+  @media(max-width:700px){.cols2{grid-template-columns:1fr;gap:20px;}}
+  .cols2 h4{
+    font-family:var(--serif);font-size:.95rem;margin:0 0 10px;
+    color:var(--gold);font-weight:600;letter-spacing:.02em;
+  }
+  .cols2 ul{margin:0;padding-left:17px;font-size:.89rem;color:var(--muted);}
+  .cols2 li{margin-bottom:7px;}
+  .cols2 li::marker{color:var(--fire);}
+
   /* ===== 등장 애니메이션 ===== */
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease;}
   .reveal.in{opacity:1;transform:none;}
@@ -322,6 +351,9 @@
       <a href="#fire">화 보완</a>
       <a href="#wood">목 보완</a>
       <a href="#career">직업운</a>
+      <a href="#money">금전운</a>
+      <a href="#love">연애운</a>
+      <a href="#match">궁합</a>
       <a href="#plan">실천</a>
     </nav>
   </div>
@@ -337,7 +369,7 @@
     <p class="lede">
       이 사주는 <strong>토(土)가 네 개</strong>로 넘치고 <strong>화(火)가 하나도 없는</strong> 구조입니다.
       흙은 많은데 그 흙을 데워 줄 햇빛이 없는 땅 — 그래서 일은 잘하는데 인정과 휴식이 늘 부족하게 느껴집니다.
-      이 페이지는 그 빈칸을 생활 습관으로 채우는 구체적인 방법과, 2026년 직업운의 흐름을 정리한 것입니다.
+      이 페이지는 그 빈칸을 생활 습관으로 채우는 구체적인 방법과, <strong>직업운·금전운·연애운·궁합</strong>의 흐름을 정리한 것입니다.
     </p>
     <div class="hero-meta">
       <span class="chip">일간 <b>己土 (음토)</b></span>
@@ -345,6 +377,7 @@
       <span class="chip">용신 <b>목(木)</b></span>
       <span class="chip">보조 <b>화(火)</b></span>
       <span class="chip">부족 <b>화 0개</b></span>
+      <span class="chip">분석 <b>4개 주제</b></span>
     </div>
   </div>
 </div>
@@ -758,13 +791,248 @@
   </div>
 </section>
 
-<!-- ================= 7. 실천 ================= -->
+<!-- ================= 7. 금전운 ================= -->
+<section id="money">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">07 — 금전운</span>
+      <h2>버는 힘보다 지키는 힘</h2>
+      <p class="sub">재성(財星)은 이미 두 개 있습니다. 신금(辛)과 해수(亥) — 그릇은 있는데 <b>새는 구멍</b>이 문제인 사주입니다.</p>
+    </div>
+
+    <div class="split reveal">
+      <div class="card">
+        <span class="tag">재물의 그릇</span>
+        <h3>재성 2개, 식상 1개</h3>
+        <p>년간 <b>신금(辛)</b>이 정재(正財), 년지 <b>해수(亥)</b>가 재성입니다. 성실하게 쌓는 돈, 즉 <b>근로·전문성 기반 소득</b>에 강합니다.</p>
+        <p>금(金)은 식상(食傷) — 기술과 전문성으로 재를 생하는 구조입니다. <b>한 우물을 파는 방식</b>이 이 사주에 맞습니다.</p>
+      </div>
+      <div class="card">
+        <span class="tag">새는 지점</span>
+        <h3>토 4개가 재를 나눠 먹는다</h3>
+        <p>비겁(比劫)이 4개면 재물이 <b>사람을 통해</b> 나갑니다. 정확히는 인정·체면·의리로 나갑니다.</p>
+        <ul>
+          <li>거절 못 해서 하는 대여·보증</li>
+          <li>“내가 내야지” 하는 계산</li>
+          <li>가족·동료에 대한 무의식적 지원</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="banner reveal">
+      <h3>이 사주는 회전형이 아니라 축적형이다</h3>
+      <p>
+        토(土)는 <b>쌓는 흙</b>입니다. 단기 매매·레버리지처럼 빠르게 회전하는 방식은 이 그릇의 모양과 맞지 않습니다.
+        대신 <b>자동 적립·장기 보유·반복 가능한 규칙</b>에서는 거의 흠이 없습니다.
+      </p>
+      <p>
+        그리고 여기에 결정적인 한 가지 — <b>화(火)가 0이라 ‘문서’가 약합니다.</b>
+        인성(印星)은 계약·등기·권리관계입니다. 구두 약속, 애매한 지분, 대충 넘긴 계약서가
+        이 사주에서 돈이 새는 가장 큰 통로입니다. <b>돈이 오가는 모든 건 종이로 남기세요.</b>
+      </p>
+    </div>
+
+    <div class="table-wrap reveal" style="margin-top:26px">
+      <table>
+        <thead>
+          <tr><th>구분</th><th>할 것</th><th>피할 것</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>수입</td><td>급여 외 <b>고정 수입원 1개</b> (강의·자문·자격 기반)</td><td>신규 단기 트레이딩, 지인 권유 상품</td></tr>
+          <tr><td>지출</td><td>고정비 자동이체, 생활비 상한선 고정</td><td>체면 소비, 대신 내주기, 보증</td></tr>
+          <tr><td>자산</td><td>권리관계·계약서 정리, 명의 명확화</td><td>즉흥적 공동명의, 구두 지분 약속</td></tr>
+          <tr><td>자기투자</td><td>자격·교육비를 <b>예산 항목으로 고정</b></td><td>“아까워서” 미루기 (화 결핍 악화)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="el-note reveal" style="margin-top:26px">
+      <b>2026년 자산 흐름.</b> 병오년은 화(인성)가 강해지는 해입니다. 인성은 <b>문서·계약·부동산·권리</b>를 뜻하므로
+      자산 정비와 계약 검토에 유리합니다. 다만 화는 금을 극하므로(火剋金) <b>현금 창출 속도는 잠시 둔해질 수 있습니다.</b>
+      새 투자를 늘리기보다 <b>이미 가진 것을 정리하고 문서화하는 해</b>로 쓰세요.
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. 연애운 ================= -->
+<section id="love">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">08 — 연애운</span>
+      <h2>마음은 뜨거운데 입이 무겁다</h2>
+      <p class="sub">여성 사주에서 관성(官星)은 배우자성입니다. 이 사주엔 <b>정관이 시간(時柱)</b>에 앉아 있습니다 — 인연이 늦게, 그러나 단단하게 오는 자리입니다.</p>
+    </div>
+
+    <div class="cards reveal">
+      <div class="card">
+        <span class="tag">연애 스타일</span>
+        <h3>느리게 확신하고, 오래 간다</h3>
+        <p>기토(己土)는 한 번 마음을 정하면 잘 바꾸지 않습니다. 다만 정하기까지가 느립니다.</p>
+        <ul>
+          <li>호감을 표현하기보다 상대가 먼저 알아차리길 기다림</li>
+          <li>서운함을 말하지 않고 쌓아 둠</li>
+          <li>헌신이 습관이 되어 당연해짐</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">배우자궁</span>
+        <h3>일지 미토(未土) — 비견</h3>
+        <p>배우자 자리에 나와 같은 기운이 앉았습니다. <b>동갑·동료·비슷한 처지</b>의 사람과 인연이 깊습니다.</p>
+        <ul>
+          <li>편안함과 경쟁심이 동시에 생김</li>
+          <li>서로의 영역이 흐려지면 답답해짐</li>
+          <li>친구에서 연인으로 넘어가는 경로가 잦음</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">결핍</span>
+        <h3>화 0 — 설렘의 온도</h3>
+        <p>화는 감정의 표현과 온기입니다. 이게 없으면 <b>“좋아하는데 티가 안 나는”</b> 상태가 됩니다.</p>
+        <ul>
+          <li>상대는 무관심으로 오해함</li>
+          <li>관계 초반의 온도를 못 만듦</li>
+          <li>결국 참다가 한 번에 폭발</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cols2 reveal" style="margin-top:38px">
+      <div>
+        <h4>끌리는 상대</h4>
+        <ul>
+          <li><b>화(火)가 강한 사람</b> — 밝고 표현이 많은 사람. 나에게 없는 온도를 가진 쪽에 끌립니다</li>
+          <li><b>목(木)이 강한 사람</b> — 성장 지향이고 방향을 잡아 주는 사람</li>
+          <li>말보다 행동으로 먼저 챙겨 주는 사람</li>
+        </ul>
+      </div>
+      <div>
+        <h4>반복하는 패턴</h4>
+        <ul>
+          <li>호감을 말하지 않아 상대가 떠남</li>
+          <li>무뚝뚝한 사람과 만나 온도가 같이 내려감</li>
+          <li>“이 정도면 알겠지”로 넘기다 서운함이 쌓임</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="banner reveal">
+      <h3>2026년 — 배우자궁이 직접 합을 이룬다</h3>
+      <p>
+        2026년은 병오(丙午). 지지 <b>오(午)</b>가 일지 <b>미(未)</b>와 만나
+        <b>오미육합(午未六合)</b>을 이룹니다. 배우자궁이 <b>화(火)로 채워지며 합해지는</b> 구조 — 
+        이 사주에서 인연이 가장 자연스럽게 움직이는 형태입니다.
+      </p>
+      <p>
+        시기적으로는 <b>5~8월(사오미 월)</b>이 핵심입니다. 새 사람을 만나는 것뿐 아니라,
+        <b>이미 있는 인연의 온도를 올리는 일</b>에도 이 합은 그대로 작동합니다.
+      </p>
+      <p>
+        <b>주의 —</b> 오미합은 화로 화(化)하는 합입니다. 감정이 과열되면 <b>성급한 확신</b>으로 이어질 수 있습니다.
+        시작했다면 <b>3개월은 결정을 미루는 규칙</b>을 두세요.
+      </p>
+    </div>
+
+    <p class="quote reveal" style="margin-top:38px">
+      “당신의 문제는 사랑이 부족한 게 아니라, 사랑을 <b>번역하지 않는 것</b>입니다.
+      마음은 이미 충분히 뜨겁습니다. 온도계만 꺼내면 됩니다.”
+    </p>
+  </div>
+</section>
+
+<!-- ================= 9. 궁합 ================= -->
+<section id="match">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">09 — 궁합</span>
+      <h2>어떤 사람과 오래 갈 수 있는가</h2>
+      <p class="sub">상대의 생년월일시 없이, <b>상대의 일간(日干) 오행</b>을 기준으로 정리한 궁합 가이드입니다. 상대가 태어난 날의 천간을 알면 바로 적용할 수 있습니다.</p>
+    </div>
+
+    <div class="grades reveal">
+      <div class="grade-row grade-best">
+        <div class="grade-who">화(火) 일간<small>丙 · 丁</small></div>
+        <div class="grade-why">이 사주에 없는 <b>인성</b>을 그대로 채워 줍니다. 밝고 표현이 많아 온도를 대신 꺼내 줍니다. 관인상생이 완성되는 조합.</div>
+        <div class="grade-stars"><span class="st-on">★★★★★</span></div>
+      </div>
+      <div class="grade-row">
+        <div class="grade-who">목(木) 일간<small>甲 · 乙</small></div>
+        <div class="grade-why"><b>용신</b> 조합. 성장과 구조를 주고, 토 과다를 눌러 줍니다. 역할 분담이 자연스럽게 잡히는 관계.</div>
+        <div class="grade-stars"><span class="st-on">★★★★</span><span class="st-off">★</span></div>
+      </div>
+      <div class="grade-row">
+        <div class="grade-who">금(金) 일간<small>庚 · 辛</small></div>
+        <div class="grade-why">현실 감각과 실무가 맞습니다. 다만 둘 다 감정 표현이 적어 <b>함께 서늘해질 위험</b>. 말로 확인하는 습관이 필수.</div>
+        <div class="grade-stars"><span class="st-on">★★★</span><span class="st-off">★★</span></div>
+      </div>
+      <div class="grade-row">
+        <div class="grade-who">수(水) 일간<small>壬 · 癸</small></div>
+        <div class="grade-why">수극화(水剋火). 감정의 온도가 더 내려갑니다. 대화의 깊이는 좋지만 <b>표현 부족이 겹치면 정체</b>.</div>
+        <div class="grade-stars"><span class="st-on">★★</span><span class="st-off">★★★</span></div>
+      </div>
+      <div class="grade-row">
+        <div class="grade-who">토(土) 일간<small>戊 · 己</small></div>
+        <div class="grade-why">비겁 중복. 편안하고 안정적이지만 <b>고집이 충돌하면 오래 굳습니다</b>. 서로 물러서는 규칙이 필요.</div>
+        <div class="grade-stars"><span class="st-on">★★</span><span class="st-off">★★★</span></div>
+      </div>
+    </div>
+
+    <div class="table-wrap reveal" style="margin-top:26px">
+      <table>
+        <thead>
+          <tr><th>상대 오행</th><th>관계 구조</th><th>이 사주가 받는 것</th><th>주의점</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>火</td><td>상대가 나를 생함 (火生土)</td><td>인정·휴식·표현의 온기</td><td>받기만 하면 무거워짐 — 돌려주기</td></tr>
+          <tr><td>木</td><td>상대가 나를 이김 (木剋土)</td><td>방향·구조·역할의 명확함</td><td>통제로 느껴지면 굳어 버림</td></tr>
+          <tr><td>金</td><td>내가 상대를 생함 (土生金)</td><td>성과·실속·현실 감각</td><td>내가 다 퍼주는 구조가 됨</td></tr>
+          <tr><td>水</td><td>내가 상대를 이김 (土剋水)</td><td>지적 교류·감정의 깊이</td><td>표현 부족이 겹쳐 냉각</td></tr>
+          <tr><td>土</td><td>대등 (同氣)</td><td>편안함·신뢰·오랜 시간</td><td>정체와 고집 충돌</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="steps reveal" style="margin-top:44px">
+      <div class="step">
+        <div class="n">01</div>
+        <div>
+          <h3>표현을 먼저 꺼내는 사람</h3>
+          <p>이 사주는 마음이 없어서가 아니라 <b>꺼내는 순서를 모릅니다.</b> 상대가 먼저 말해 주면 훨씬 편하게 따라갑니다.</p>
+          <p>“말 안 해도 알겠지”가 통하는 사람보다, <b>“요즘 어때?”를 먼저 물어보는 사람</b>이 오래 갑니다.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="n">02</div>
+        <div>
+          <h3>결정을 당겨 주는 사람</h3>
+          <p>토 과다의 가장 큰 약점은 <b>미루기</b>입니다. 상대가 재촉하는 게 아니라, 함께 결론을 내주는 사람이어야 합니다.</p>
+          <p>반대로 모든 결정을 떠넘기는 사람을 만나면 이 사주는 <b>혼자 다 짊어지고 소진</b>합니다.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="n">03</div>
+        <div>
+          <h3>나의 무게를 당연하게 여기지 않는 사람</h3>
+          <p>헌신이 습관이 되면 상대는 그것을 <b>성격으로</b> 받아들입니다. 그러다 어느 날 멈추면 관계가 흔들립니다.</p>
+          <p>고마움을 말로 표현하는 사람, <b>“네가 해 줬으니까”를 기억하는 사람</b>이 이 사주의 오랜 동반자입니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="el-note reveal" style="margin-top:26px">
+      <b>활용법.</b> 상대의 생년월일을 알면 그날의 <b>일간(日干)</b>을 확인해 위 등급을 적용할 수 있습니다.
+      상대 정보를 알려주시면 <b>실제 두 사주의 합·충·오행 분포까지 계산한 정밀 궁합</b>으로 이 섹션을 교체해 드립니다.
+      궁합 점수는 관계를 대신 결정하지 않습니다 — 대화의 참고자료로만 쓰세요.
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. 실천 ================= -->
 <section id="plan">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">07 — 실천</span>
+      <span class="sec-num">10 — 실천</span>
       <h2>30일 실행 체크리스트</h2>
-      <p class="sub">거창하게 시작하면 3일 만에 멈춥니다. <b>체크박스를 눌러 하나씩</b> 지워 보세요. 8개 중 5개만 지속해도 체감이 달라집니다.</p>
+      <p class="sub">거창하게 시작하면 3일 만에 멈춥니다. <b>체크박스를 눌러 하나씩</b> 지워 보세요. 12개 중 6개만 지속해도 체감이 달라집니다.</p>
     </div>
 
     <div class="checklist reveal" id="checklist">
@@ -776,6 +1044,10 @@
       <label class="check-item"><input type="checkbox" /><span class="box"></span><span class="txt">매주 업무 성과 한 장으로 정리해 남기기</span></label>
       <label class="check-item"><input type="checkbox" /><span class="box"></span><span class="txt">업무 하나를 매뉴얼화해 남에게 넘기기</span></label>
       <label class="check-item"><input type="checkbox" /><span class="box"></span><span class="txt">칭찬받으면 “고맙습니다”까지 말하고 넘기지 않기</span></label>
+      <label class="check-item"><input type="checkbox" /><span class="box"></span><span class="txt">돈이 오가는 약속은 반드시 문자·문서로 남기기</span></label>
+      <label class="check-item"><input type="checkbox" /><span class="box"></span><span class="txt">고정비 자동이체로 새는 지출 막기</span></label>
+      <label class="check-item"><input type="checkbox" /><span class="box"></span><span class="txt">서운함을 그날 안에 한 문장으로 말하기</span></label>
+      <label class="check-item"><input type="checkbox" /><span class="box"></span><span class="txt">호감·고마움을 하루 한 번 먼저 표현하기</span></label>
     </div>
 
     <div class="quote reveal" style="margin-top:40px">
